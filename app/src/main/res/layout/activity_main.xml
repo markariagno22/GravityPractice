@@ -7,32 +7,59 @@
     tools:context=".MainActivity">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="360dp"
-        android:layout_marginTop="136dp"
-        android:clipToPadding="false"
-        android:orientation="vertical"
-        android:padding="20dp"
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="40dp"
+        android:text="Gravity"
+        android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="120dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_horizontal|top"
-            android:gravity="center"
-            android:text="TextView" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Layout Gravity"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
 
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="130dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:includeFontPadding="false"
-            android:text="Button" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.555" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/buttonEnd"
+        style="@style/CustomButton"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="116dp"
+        android:gravity="start|center_vertical"
+        android:text="Start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        style="@style/CustomButton"
+        android:layout_marginStart="32dp"
+        android:gravity="center_vertical|end"
+        android:text="End"
+        app:layout_constraintStart_toEndOf="@+id/buttonEnd"
+        app:layout_constraintTop_toTopOf="@+id/buttonEnd" />
+
+    <Button
+        android:id="@+id/buttonCenter"
+        style="@style/CustomButton"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Center"
+        app:layout_constraintStart_toStartOf="@+id/buttonEnd"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEnd" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
