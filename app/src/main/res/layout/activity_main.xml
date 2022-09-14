@@ -68,7 +68,6 @@
         <Button
             android:id="@+id/layoutButtonEnd"
             style="@style/CustomButton"
-
             android:layout_gravity="end"
             android:text="End" />
 
@@ -77,6 +76,19 @@
             style="@style/CustomButton"
             android:layout_gravity="center"
             android:text="Center" />
+
+        <Button
+            android:id="@+id/layoutButtonBottomStart"
+            style="@style/CustomButton"
+            android:layout_gravity="bottom|start"
+            android:text="Bottom + Start" />
+
+        <Button
+            android:id="@+id/layoutButtonBottomEnd"
+            style="@style/CustomButton"
+            android:layout_gravity="bottom|end"
+            android:text="Bottom + End" />
+        
     </FrameLayout>
 
     <TextView
