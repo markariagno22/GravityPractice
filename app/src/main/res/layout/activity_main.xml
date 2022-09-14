@@ -7,59 +7,91 @@
     tools:context=".MainActivity">
 
 
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:text="Gravity"
+        android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Layout Gravity"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
-
     <Button
         android:id="@+id/buttonEnd"
         style="@style/CustomButton"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical|end"
+        android:text="End"
+        app:layout_constraintStart_toEndOf="@+id/buttonCenter"
+        app:layout_constraintTop_toTopOf="@+id/buttonCenter" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        style="@style/CustomButton"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="108dp"
         android:gravity="start|center_vertical"
         android:text="Start"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonStart"
-        style="@style/CustomButton"
-        android:layout_marginStart="32dp"
-        android:gravity="center_vertical|end"
-        android:text="End"
-        app:layout_constraintStart_toEndOf="@+id/buttonEnd"
-        app:layout_constraintTop_toTopOf="@+id/buttonEnd" />
-
-    <Button
         android:id="@+id/buttonCenter"
         style="@style/CustomButton"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="8dp"
         android:gravity="center"
         android:text="Center"
-        app:layout_constraintStart_toStartOf="@+id/buttonEnd"
-        app:layout_constraintTop_toBottomOf="@+id/buttonEnd" />
+        app:layout_constraintStart_toEndOf="@+id/buttonStart"
+        app:layout_constraintTop_toTopOf="@+id/buttonStart" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="320dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="12dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <Button
+            android:id="@+id/layoutButtonStart"
+            style="@style/CustomButton"
+
+            android:layout_gravity="start"
+            android:text="Start" />
+
+        <Button
+            android:id="@+id/layoutButtonEnd"
+            style="@style/CustomButton"
+
+            android:layout_gravity="end"
+            android:text="End" />
+
+        <Button
+            android:id="@+id/layoutButtonCenter"
+            style="@style/CustomButton"
+            android:layout_gravity="center"
+            android:text="Center" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Layout Gravity"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.397" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
